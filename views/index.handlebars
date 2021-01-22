@@ -1,0 +1,34 @@
+<h1>Chores!</h1>
+
+<h2>list of common chores!</h2>
+
+<table class="table table-striped">
+  
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Chore</th>
+      <th scope="col">Completed</th>
+      <th scope="col">Points</th>
+      <th scope="col">User A</th>
+      <th scope="col">User B</th>
+    </tr>
+  </thead>
+
+
+  <tbody>
+  
+    {{#each chores}}
+      <tr>
+      <th scope="row">{{id}}</th>
+      <td>{{chore}}</td>
+      <td>{{completed}}</td>
+      <td>{{points}}</td>
+      <td>{{points}}</td>
+      <td>{{points}}</td>
+    </tr>
+    {{/each}}
+
+  </tbody>
+
+</table>
