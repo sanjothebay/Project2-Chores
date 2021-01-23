@@ -7,7 +7,12 @@ module.exports = function (sequelize, DataTypes) {
         points: {
             type: DataTypes.INTEGER,
             defaultValue: 10
-        }
+        },
+        completed: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: false
+        },
+        
     })
     /* Chores.associate = function(models) {
         Chores.hasMany(models.ChoresAndUsers, {
