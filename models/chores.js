@@ -1,23 +1,20 @@
 module.exports = function (sequelize, DataTypes) {
     var Chores = sequelize.define("Chores", {
-        id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            primaryKey: true,
-        },
+        
         chore: {
             type: DataTypes.STRING,
         },
         points: {
             type: DataTypes.INTEGER,
+            defaultValue: 10
         }
     })
-    Chores.associate = function(models) {
-        Chores.belongsTo(models.ChoresAndUsers, {
+    /* Chores.associate = function(models) {
+        Chores.hasMany(models.ChoresAndUsers, {
             foreingKey: {
                 allowNull: false,
             }
         })
-    }
+    } */
     return Chores
 };

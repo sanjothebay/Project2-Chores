@@ -10,7 +10,7 @@ module.exports = function (sequelize, DataTypes) {
         },
     })
     Users.associate = function(models) {
-        Users.belongsTo(models.ChoresAndUsers, {
+        Users.hasMany(models.ChoresAndUsers, {
             foreingKey: {
                 allowNull: false,
             }
