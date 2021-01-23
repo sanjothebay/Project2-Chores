@@ -15,7 +15,7 @@ module.exports = function(app) {
   // index route loads view.html
   app.get("/", function(req, res) {
     db.Chores.findAll().then(function (data){
-      console.log(data[0].dataValues);
+      // console.log(data);
       res.render("index", {
         chores: data
       })
@@ -24,6 +24,8 @@ module.exports = function(app) {
 
   });
 
- 
+  app.get("/input", function(req, res) {
+    res.render("inputForm")
+  })
 
 };
