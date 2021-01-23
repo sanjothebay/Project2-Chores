@@ -19,6 +19,10 @@ module.exports = function (sequelize, DataTypes) {
         Points: {
             type: DataTypes.INTEGER,
         },
+        completed: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: false
+        },
     })
     ChoresAndUsers.associate = function(models) {
 
