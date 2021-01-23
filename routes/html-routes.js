@@ -4,7 +4,7 @@
 
 // Dependencies
 // =============================================================
-var path = require("path");
+const db = require("../models");
 
 // Routes
 // =============================================================
@@ -14,7 +14,14 @@ module.exports = function(app) {
 
   // index route loads view.html
   app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/chores.html"));
+    db.Chores.findAll().then(function (data){
+      console.log(data[0].dataValues);
+      res.render("index", {
+        chores: data
+      })
+
+    })
+
   });
 
  
