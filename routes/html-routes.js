@@ -13,7 +13,17 @@ module.exports = function(app) {
   // Each of the below routes just handles the HTML page that the user gets sent to.
 
   // index route loads view.html
+
   app.get("/", function(req, res) {
+    res.render("home")
+  })
+  
+  app.get("/input", function(req, res) {
+    res.render("inputForm")
+  })
+
+
+  app.get("/summary", function(req, res) {
     db.Chores.findAll().then(function (data){
       // console.log(data);
       res.render("index", {
@@ -24,8 +34,8 @@ module.exports = function(app) {
 
   });
 
-  app.get("/input", function(req, res) {
-    res.render("inputForm")
-  })
+
+  
+  
 
 };

@@ -1,34 +1,39 @@
-<h1>Chores!</h1>
+<div class="container">
 
-<h2>list of common chores!</h2>
+  <h1>Chores!</h1>
 
-<table class="table table-striped">
-  
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Chore</th>
-      <th scope="col">Completed</th>
-      <th scope="col">Points</th>
-      <th scope="col">User A</th>
-      <th scope="col">User B</th>
-    </tr>
-  </thead>
+  <h2>list of common chores!</h2>
 
-
-  <tbody>
-  
-    {{#each chores}}
+  <table class="table table-striped">
+    
+    <thead>
       <tr>
-      <th scope="row">{{dataValues.id}}</th>
-      <td>{{dataValues.chore}}</td>
-      <td>{{dataValues.completed}}</td>
-      <td>{{dataValues.points}}</td>
-      <td>{{dataValues.points}}</td>
-      <td>{{dataValues.points}}</td>
-    </tr>
-    {{/each}}
+        <th scope="col">#</th>
+        <th scope="col">Chore</th>
+        <th scope="col">Completed</th>
+        <th scope="col">Points</th>
+        <th scope="col">User A</th>
+        <th scope="col">User B</th>
+      </tr>
+    </thead>
 
-  </tbody>
 
-</table>
+    <tbody>
+    
+      {{#each chores}}
+        <tr>
+        <th scope="row">{{dataValues.id}}</th>
+        <td>{{dataValues.chore}}</td>
+        <td>{{dataValues.completed}}</td>
+        <td>{{dataValues.points}}</td>
+        <td>{{dataValues.points}}</td>
+        <td>{{dataValues.points}}</td>
+      </tr>
+      {{/each}}
+
+    </tbody>
+
+  </table>
+
+</div>
+
