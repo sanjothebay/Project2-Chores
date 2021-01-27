@@ -1,7 +1,7 @@
 ### Schema
 
-CREATE DATABASE chores_db;
-USE chores_db;
+CREATE DATABASE choresApp_db;
+USE choresApp_db;
 
 CREATE TABLE chores
 (
