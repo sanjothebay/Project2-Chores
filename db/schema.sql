@@ -12,3 +12,11 @@ CREATE TABLE chores
 	PRIMARY KEY (id)
 );
 
+
+CREATE DATABASE choresApp_db;
+USE choresApp_db;
+
+
+SELECT *FROM users;
+
+SELECT *FROM chores;
