@@ -1,12 +1,12 @@
 $(function(){
     $(".addUser").on("submit", function(event){
         event.preventDefault();
-        var UserNameInput = $("#userNameInput").val();
-        console.log(UserNameInput);
+        var userInput = $("#userInput").val();
+        console.log(userInput);
         $.ajax("/api/user", {
             type: "POST",
             data: {
-                user: UserNameInput
+                user: userInput
             }
         }).then(function(){
             console.log("it worked!");
