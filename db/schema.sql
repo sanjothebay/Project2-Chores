@@ -1,7 +1,7 @@
 ### Schema
 
-CREATE DATABASE chores_db;
-USE chores_db;
+CREATE DATABASE choresApp_db;
+USE choresApp_db;
 
 CREATE TABLE chores
 (
@@ -12,3 +12,11 @@ CREATE TABLE chores
 	PRIMARY KEY (id)
 );
 
+
+CREATE DATABASE choresApp_db;
+USE choresApp_db;
+
+
+SELECT *FROM users;
+
+SELECT *FROM chores;

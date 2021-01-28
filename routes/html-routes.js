@@ -22,19 +22,31 @@ module.exports = function(app) {
     res.render("inputForm")
   })
 
-
+  
   app.get("/summary", function(req, res) {
     db.Chores.findAll().then(function (data){
-      // console.log(data);
+     //  console.log(data);
       res.render("index", {
-        chores: data
-      })
+        chores: data,
+        users: data,
+      });
 
     })
+    
 
-  });
+  })
+  
+  // app.get("/summary", function(req, res) {
+  //   db.Users.findAll().then(function (data){
+  //      console.log(data);
+  //     res.render("index", {
+  //       //users: data,
+  //       chores: data,
+  //     })
 
+  //   })
 
+  // })
   
   
 
