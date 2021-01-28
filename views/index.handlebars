@@ -26,8 +26,15 @@
         <td>{{dataValues.chore}}</td>
         <td>{{dataValues.completed}}</td>
         <td>{{dataValues.points}}</td>
-        <td>{{dataValues.users}}</td>
-        <td>{{dataValues.points}}</td>
+        <td>{{dataValues.user}}</td>
+        <td>{{dataValues.user}}</td>
+      </tr>
+      {{/each}}
+            {{#each users}}
+        <tr>
+        <th scope="row">{{dataValues.id}}</th>
+        <td>{{dataValues.user}}</td>
+        <td>{{dataValues.user}}</td>
       </tr>
       {{/each}}
 
