@@ -23,21 +23,17 @@ module.exports = function(app) {
   })
 
   
-  app.get("/summary", function(req, res) {
-    db.Chores.findAll().then(function (data){
-     //  console.log(data);
-      res.render("index", {
-        chores: data,
-        users: data,
-      });
-
-    })
-    
-
+  app.get('/summary', async function(req, res) {
+    var chores = await db.Chores.findAll()
+    var Users = await db.Chores.findAll(){
+      
+    }
+     //  console.log(data)
   })
   
+  
   // app.get("/summary", function(req, res) {
-  //   db.Users.findAll().then(function (data){
+  //   db.Chores.findAll().then(function (data){
   //      console.log(data);
   //     res.render("index", {
   //       //users: data,
