@@ -1,0 +1,44 @@
+{
+  "name": "project2-chores",
+  "version": "1.0.0",
+  "description": "App to leanr how to use sequelize and handlebars",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pegasus-1982/Project2-Chores.git"
+  },
+  "keywords": [
+    "“bcryptjs",
+    "express",
+    "express-handlebars",
+    "mysql2",
+    "passport",
+    "passport-local",
+    "sequelize”"
+  ],
+  "author": "Luis JC Raquel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pegasus-1982/Project2-Chores/issues"
+  },
+  "homepage": "https://github.com/pegasus-1982/Project2-Chores#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.1",
+    "mysql2": "^2.2.5",
+    "path": "^0.12.7",
+    "save": "^2.4.0",
+    "sequelize": "^6.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
