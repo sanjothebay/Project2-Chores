@@ -11,10 +11,9 @@ const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, console.log(`Server started on port ${PORT}`));
 
-
+/*
+We move all this to config file name database.js 
 const Sequelize = require('sequelize');
-const { SSL_OP_NETSCAPE_DEMO_CIPHER_CHANGE_BUG } = require('constants');
-
 // Option 1: Passing parameters separately
 const db = new Sequelize('choresApp_db', 'root', '12345678', {
     host: 'localhost',
@@ -26,6 +25,12 @@ const db = new Sequelize('choresApp_db', 'root', '12345678', {
         idle: 10000
         }
     });
+
+*/
+
+//we  require the DB
+const db = require('./config/database');
+
 
 //test DB 
 db.authenticate()
