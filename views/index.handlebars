@@ -19,15 +19,17 @@
 
 
     <tbody>
-    
+    {{log info}}
       {{#each chores}}
         <tr>
         <th scope="row">{{dataValues.id}}</th>
         <td>{{dataValues.chore}}</td>
         <td>{{dataValues.completed}}</td>
         <td>{{dataValues.points}}</td>
+        {{#each users}}
         <td>{{dataValues.user}}</td>
         <td>{{dataValues.user}}</td>
+         {{/each}}
       </tr>
       {{/each}}
 

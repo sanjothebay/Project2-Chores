@@ -24,13 +24,16 @@ module.exports = function(app) {
 
   
   app.get('/summary', async function(req, res) {
-    var chores = await db.Chores.findAll()
-    var Users = await db.Chores.findAll(){
-      
-    }
-     //  console.log(data)
-  })
-  
+    db.Users.findAll().then(function (dataUsers){
+      db.Chores.findAll().then(function (dataChores){
+         res.render("index", {
+          users: dataUsers,
+           chores: dataChores,
+         })
+         
+     })
+    })
+    })
   
   // app.get("/summary", function(req, res) {
   //   db.Chores.findAll().then(function (data){
