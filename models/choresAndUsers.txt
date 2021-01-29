@@ -1,0 +1,44 @@
+// module.exports = function (sequelize, DataTypes) {
+//     var ChoresAndUsers = sequelize.define("ChoresAndUsers", {
+        
+//       /*   userID: {
+//             type: DataTypes.INTEGER,
+//         },
+//         user: {
+//             type: DataTypes.STRING,
+//         },
+//         choreID: {
+//             type: DataTypes.INTEGER,
+//         },
+//         chore: {
+//             type: DataTypes.STRING,
+//         }, */
+//         completionDate: {
+//             type: DataTypes.DATE,
+//         },
+//         Points: {
+//             type: DataTypes.INTEGER,
+//         },
+//         completed: {
+//             type: DataTypes.BOOLEAN,
+//             defaultValue: false
+//         },
+//     })
+//     ChoresAndUsers.associate = function(models) {
+
+//         ChoresAndUsers.belongsTo(models.Users, {
+//             foreingKey: {
+//                 name: "userID",
+//                 allowNull: false,
+//             }
+//         })
+
+//          ChoresAndUsers.belongsTo(models.Chores, {
+//             foreingKey: {
+//                 name: "choreID",
+//                 allowNull: false,
+//             }
+//         }) 
+//     }
+//     return ChoresAndUsers
+// };

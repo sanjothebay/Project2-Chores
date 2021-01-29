@@ -11,10 +11,8 @@ module.exports = function (sequelize, DataTypes) {
         },
     })
     Users.associate = function(models) {
-        Users.hasMany(models.ChoresAndUsers, {
-            foreignKey: {
-                allowNull: false,
-            }
+        Users.belongsToMany(models.Chores, {
+            through: "choresAndUsers"
         })
     }
     return Users

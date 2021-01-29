@@ -14,12 +14,10 @@ module.exports = function (sequelize, DataTypes) {
         },
         
     })
-    /* Chores.associate = function(models) {
-        Chores.hasMany(models.ChoresAndUsers, {
-            foreingKey: {
-                allowNull: false,
-            }
+     Chores.associate = function(models) {
+        Chores.belongsToMany(models.Users, {
+            through: "choresAndUsers"
         })
-    } */
+    } 
     return Chores
 };
