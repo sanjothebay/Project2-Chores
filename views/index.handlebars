@@ -5,31 +5,38 @@
   <h2>list of common chores!</h2>
 
   <table class="table table-striped">
-    
+
     <thead>
       <tr>
         <th scope="col">#</th>
         <th scope="col">Chore</th>
         <th scope="col">Completed</th>
         <th scope="col">Points</th>
-        <th scope="col">User A</th>
-        <th scope="col">User B</th>
+        {{#each users}}
+        <th scope="col">{{dataValues.user}}</th>
+        {{/each }}
       </tr>
     </thead>
 
 
     <tbody>
-    {{log info}}
-      {{#each chores}}
-        <tr>
+      {{#each chores as |chore|}}
+      <tr>
         <th scope="row">{{dataValues.id}}</th>
         <td>{{dataValues.chore}}</td>
         <td>{{dataValues.completed}}</td>
         <td>{{dataValues.points}}</td>
-        {{#each users}}
-        <td>{{dataValues.user}}</td>
-        <td>{{dataValues.user}}</td>
-         {{/each}}
+        {{!-- // calling the partials handlebars {{!expressions}} --}}
+        {{log users}}
+        {{#each users as |user| }}
+        <td>
+          <button class="grid-button" data-user={{user.dataValues.id}} data-chore={{chore.dataValues.id}}>
+
+            Complete
+          </button>
+        </td>
+        {{/each}}
+        {{!-- {{> chores/chore-block users=users}} --}}
       </tr>
       {{/each}}
 
@@ -39,3 +46,14 @@
 
 </div>
 
+<script>
+  $( ".grid-button" ).on( "click", function ( event )
+  {
+    event.preventDefault();
+    console.log( 'click' );
+    const userId = $( this ).data( 'user' );
+    const choreId = $( this ).data( 'chore' );
+
+    console.log( { userId, choreId } )
+  } )
+</script>
