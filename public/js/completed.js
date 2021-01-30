@@ -9,13 +9,13 @@ $(function () {
       setValue: true
     };
 
-    $.ajax("/api/chore/", choreId, {
+    $.ajax("/api/chore/", {
       type: "PUT",
       data: gotCleanedUp
           
       
   }).then(function(){
-      console.log("it worked!");
+      console.log("it worked today!");
   })
   });
 });

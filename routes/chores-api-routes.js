@@ -54,12 +54,12 @@ module.exports = function(app) {
     });
   
     // PUT route for updating posts
-    app.put("/api/posts", function(req, res) {
-      db.Post.update(
+    app.put("/api/chore", function(req, res) {
+      db.Chores.update(
         req.body,
         {
           where: {
-            id: req.body.id
+            completed: req.body.completed
           }
         }).then(function(dbPost) {
         res.json(dbPost);
