@@ -30,13 +30,12 @@
         {{log users}}
         {{#each users as |user| }}
         <td>
-          <button class="grid-button" data-user={{user.dataValues.id}} data-chore={{chore.dataValues.id}}>
+          <button class="completed-button" data-user={{user.dataValues.id}} data-chore={{chore.dataValues.id}}>
 
             Complete
           </button>
         </td>
         {{/each}}
-        {{!-- {{> chores/chore-block users=users}} --}}
       </tr>
       {{/each}}
 
