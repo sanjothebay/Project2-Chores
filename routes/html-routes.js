@@ -35,18 +35,4 @@ module.exports = function (app) {
       });
     });
   });
-
-  // app.get('/summary', async function(req, res) {
-  //   db.Users.findAll().then(function (dataUsers){
-  //         console.log(dataUsers);
-  //     db.Chores.findAll().then(function (dataChores){
-  //        console.log(dataChores);
-  //        res.render("index", {
-  //         users: dataUsers,
-  //          chores: dataChores,
-  //        })
-
-  //    })
-  //   })
-  //   })
 };
