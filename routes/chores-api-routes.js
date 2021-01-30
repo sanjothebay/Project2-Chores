@@ -59,10 +59,11 @@ module.exports = function(app) {
         req.body,
         {
           where: {
-            completed: req.body.completed
+            chore: req.body.completed,
+            completed: true,
           }
-        }).then(function(dbPost) {
-        res.json(dbPost);
+        }).then(function(dbPut) {
+        res.json(dbPut);
       });
     });
   };
