@@ -57,8 +57,8 @@ module.exports = function (app) {
     console.log("REQ BODY: ", req.body);
     console.log("REQ PARAMS: ", req.params);
     db.Chores.update(
+      req.body,
       {
-        completed: req.body.completed,
         completed: 1,
       },
       {

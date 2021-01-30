@@ -3,12 +3,11 @@ $(function () {
     event.preventDefault();
     const userId = $(this).data("user");
     const choreId = $(this).data("chore");
-    //console.log({ userId, choreId });
+    console.log({ userId, choreId });
 
     $.ajax("/api/chore/:id", {
       type: "PUT",
-      data: completed,
-          
+      data: {choreId},
       
   }).then(function(){
       console.log("it worked!");
