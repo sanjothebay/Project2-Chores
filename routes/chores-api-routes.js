@@ -56,11 +56,12 @@ module.exports = function(app) {
     // PUT route for updating posts
     app.put("/api/chore", function(req, res) {
       db.Chores.update(
-        req.body,
+        {
+          completed: true,
+        },
         {
           where: {
             chore: req.body.completed,
-            completed: true,
           }
         }).then(function(dbPut) {
         res.json(dbPut);
