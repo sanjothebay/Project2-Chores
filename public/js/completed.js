@@ -9,7 +9,7 @@ $(function () {
       setValue: true
     };
 
-    $.ajax("/api/chore/", {
+    $.ajax("/api/chore/", choreId, {
       type: "PUT",
       data: gotCleanedUp
           
