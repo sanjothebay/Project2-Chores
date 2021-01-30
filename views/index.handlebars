@@ -30,8 +30,16 @@
         {{log users}}
         {{#each users as |user| }}
         <td>
-          <button class="completed-button" data-user={{user.dataValues.id}} data-chore={{chore.dataValues.id}}>
+           {{!-- // {{!expressions}} --}}
+        <select class="form-select" aria-label="Default select example">
+          <option selected>Select one option</option>
+          <option value="0">Finish</option>
+          <option value="1">In Proges</option>
+        </select>
 
+          <button class="completed-button" data-user={{user.dataValues.id}} data-chore={{chore.dataValues.id}}>
+	  {{!-- // botones {{!expressions}} --}}
+ 
             Complete
           </button>
         </td>
