@@ -5,12 +5,13 @@ $(function () {
     const choreId = $(this).data("chore");
     console.log({ userId, choreId });
 
-    $.ajax("/api/chore/:id", {
+    $.ajax("/api/chore/" + choreId, {
       type: "PUT",
       data: {choreId},
       
-  }).then(function(){
-      console.log("it worked!");
+  }).then(function(data){
+      console.log(data);
+      location.reload();
   })
   });
 });
