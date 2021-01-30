@@ -1,9 +1,8 @@
 // Requiring our models
 var db = require("../models");
 
-module.exports = function(app) {
-
-   /*  // GET route for getting all of the posts
+module.exports = function (app) {
+  /*  // GET route for getting all of the posts
     app.get("/api/posts", function(req, res) {
       var query = {};
       if (req.query.author_id) {
@@ -36,35 +35,40 @@ module.exports = function(app) {
     });
   
     // POST route for saving a new post */
-    app.post("/api/chore", function(req, res) {
-      db.Chores.create(req.body).then(function(dbChore) {
-        res.json(dbChore);
-      });
+  app.post("/api/chore", function (req, res) {
+    db.Chores.create(req.body).then(function (dbChore) {
+      res.json(dbChore);
     });
-  
-    // DELETE route for deleting posts
-    app.delete("/api/posts/:id", function(req, res) {
-      db.Post.destroy({
+  });
+
+  // DELETE route for deleting posts
+  // app.delete("/api/chore/:id", function(req, res) {
+  //   db.Post.destroy({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   }).then(function(dbdelete) {
+  //     res.json(dbdelete);
+  //   });
+  // });
+
+  // PUT route for updating posts
+  app.put("/api/chore/:id", function (req, res) {
+    console.log("REQ BODY: ", req.body);
+    console.log("REQ PARAMS: ", req.params);
+    db.Chores.update(
+      req.body,
+      {
+        completed: 1,
+      },
+      {
+        
         where: {
-          id: req.params.id
-        }
-      }).then(function(dbPost) {
-        res.json(dbPost);
-      });
+          id: req.params.id,
+        },
+      }
+    ).then(function (dbPut) {
+      res.json(dbPut);
     });
-  
-    // PUT route for updating posts
-    app.put("/api/chore", function(req, res) {
-      db.Chores.update(
-        req.body,
-        {
-          where: {
-            chore: req.body.completed,
-            completed: true,
-          }
-        }).then(function(dbPut) {
-        res.json(dbPut);
-      });
-    });
-  };
-  
+  });
+};
