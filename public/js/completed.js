@@ -7,6 +7,7 @@ $(function () {
 
     $.ajax("/api/chore/:id", {
       type: "PUT",
+      data: completed,
           
       
   }).then(function(){
