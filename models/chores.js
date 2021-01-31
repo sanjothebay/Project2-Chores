@@ -12,6 +12,9 @@ module.exports = function (sequelize, DataTypes) {
             type: DataTypes.BOOLEAN,
             defaultValue: false
         },
+        userId: {
+            type: DataTypes.INTEGER,
+        },
         
     })
      Chores.associate = function(models) {

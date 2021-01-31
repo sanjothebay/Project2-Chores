@@ -28,6 +28,16 @@
         <td>{{dataValues.points}}</td>
         {{!-- // calling the partials handlebars {{!expressions}} --}}
         {{!-- {{log users}} --}}
+        {{#if dataValues.completed}}
+        {{#each users as |user| }}
+        <td>
+          {{!-- {{#if }}
+          {{/if }} --}}
+          {{log user.dataValues}}
+        </td>
+        {{/each}}
+        {{/if}}
+        {{#unless dataValues.completed}}
         {{#each users as |user| }}
         <td>
           <button class="completed-button" data-user={{user.dataValues.id}} data-chore={{chore.dataValues.id}}>
@@ -36,6 +46,7 @@
           </button>
         </td>
         {{/each}}
+        {{/unless}}
       </tr>
       {{/each}}
 

@@ -4,10 +4,11 @@ $(function () {
     const userId = $(this).data("user");
     const choreId = $(this).data("chore");
     console.log({ userId, choreId });
+    const choreData = {userId: userId, choreId: choreId }
 
     $.ajax("/api/chore/" + choreId, {
       type: "PUT",
-      data: {choreId},
+      data: {choreData},
       
   }).then(function(data){
       console.log(data);
