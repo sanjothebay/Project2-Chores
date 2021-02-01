@@ -1,8 +1,18 @@
-<div class="container">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../public/css/summarystyles.css" type="text/css" />
+  <title>Chore App!</title>
+</head>
+<body id="summarybdy">
 
-  <h1>Chores!</h1>
+  <div class="container">
 
-  <h2>list of common chores!</h2>
+  <h1>Chores!🧼</h1>
+
+  <h2>list of common chores!🧼</h2>
 
   <table class="table table-striped">
 
@@ -27,7 +37,17 @@
         <td>{{dataValues.completed}}</td>
         <td>{{dataValues.points}}</td>
         {{!-- // calling the partials handlebars {{!expressions}} --}}
-        {{log users}}
+        {{!-- {{log users}} --}}
+        {{#if dataValues.completed}}
+        {{#each users as |user| }}
+        <td>
+          {{!-- {{#if }}
+          {{/if }} --}}
+          {{log user.dataValues}}
+        </td>
+        {{/each}}
+        {{/if}}
+        {{#unless dataValues.completed}}
         {{#each users as |user| }}
         <td>
           <button class="completed-button" data-user={{user.dataValues.id}} data-chore={{chore.dataValues.id}}>
@@ -36,6 +56,7 @@
           </button>
         </td>
         {{/each}}
+        {{/unless}}
       </tr>
       {{/each}}
 
@@ -44,3 +65,7 @@
   </table>
 
 </div>
+
+  
+</body>
+</html>

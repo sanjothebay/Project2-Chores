@@ -2,7 +2,7 @@ $(function(){
     $(".addChore").on("submit", function(event){
         event.preventDefault();
         var choreInput = $("#choreInput").val();
-        console.log(choreInput);
+        //console.log(choreInput);
         $.ajax("/api/chore", {
             type: "POST",
             data: {

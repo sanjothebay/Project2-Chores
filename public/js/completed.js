@@ -4,18 +4,15 @@ $(function () {
     const userId = $(this).data("user");
     const choreId = $(this).data("chore");
     console.log({ userId, choreId });
+    const choreData = {userId: userId, choreId: choreId }
 
-    var gotCleanedUp = {
-      setValue: true
-    };
-
-    $.ajax("/api/chore/", {
+    $.ajax("/api/chore/" + choreId, {
       type: "PUT",
-      data: gotCleanedUp
-          
+      data: {choreData},
       
-  }).then(function(){
-      console.log("it worked!");
+  }).then(function(data){
+      console.log(data);
+      location.reload();
   })
   });
 });
