@@ -8,6 +8,7 @@ $(function(){
                 user: userInput
             }
         }).then(function(){
+            $("#userInput").val(" ");
             console.log("it worked!");
         })
     })

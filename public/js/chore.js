@@ -9,6 +9,7 @@ $(function(){
                 chore: choreInput
             }
         }).then(function(){
+            $("#choreInput").val(" ")
             console.log("it worked!");
         })
     })
