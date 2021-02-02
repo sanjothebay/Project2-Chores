@@ -8,6 +8,8 @@ Created by JC , LUIS , RAQUEL
 
 https://github.com/pegasus-1982/Project2-Chores/tree/JC
 
+![image](https://user-images.githubusercontent.com/67298961/106533785-5ce1e400-64b8-11eb-9e8d-0aa781c02bc0.png)
+
 # Table of contents
 
 ---
@@ -17,16 +19,18 @@ https://github.com/pegasus-1982/Project2-Chores/tree/JC
 3. [Tables](#Tables)
 4. [INSERT INTO VALUES](#INSERT_INTO_VALUES)
 
-## Description
 
-:bulb:
+## Description :bulb:
 
 ---
 
 General information about this project.
 
-This application that can be used to write, save, and delete notes.
-This application use an express backend and save and retrieve note data from a JSON file.
+The application can be used to keep track of chores and who completed the chore. 
+This application uses Sequelize as a backend and save and retrieve the Name and Chore data.
+
+![image](https://user-images.githubusercontent.com/67298961/106533883-8995fb80-64b8-11eb-90e8-7fdda73d4629.png)
+
 
 ## Instruction <a name="Instruction"></a>
 
@@ -40,7 +44,43 @@ This application use an express backend and save and retrieve note data from a J
 
 ## Instructions/Getting Started
 
+## Application Requirements
+
+* Must use a Node and Express server
+
+* Must use Handlebars.js as the template engine
+
+* Must be backed by a MySQL database with a Sequelize ORM
+
+* Must utilize both GET and POST routes for retrieving and adding new data
+
+* Must be deployed using Heroku (with data)
+
+* Must utilize at least one new library, package, or technology that we haven’t discussed
+
+* Must have a polished front end/UI
+
+* Must have a folder structure that meets the MVC paradigm
+
+* Must meet good quality coding standards (indentation, scoping, naming)
+
+* Must protect API keys in Node with environment variables
+
 #### App Setup
+
+config Folder was created by running sequelize init:config and adds a config.json file.. (sequelize cli)
+
+models Folder was created by running sequelize init:models and adds a index.js file.. (sequelize cli)
+
+running npm init from the command line.
+npm install express-handlebars
+
+The application will be invoked by using the following command:
+
+```bash
+node app.js  To run the App
+npm run test To run t he tests 
+```
 
 #### Directory structure
 
@@ -99,18 +139,23 @@ All the recommended files and directories from the steps above should look like 
 
 ### Tables <a name="Tables"></a>
 ```
-	id int NOT NULL AUTO_INCREMENT,
-	chore varchar(255) NOT NULL,
-	completed BOOLEAN DEFAULT false,
-	points int 10,
-	PRIMARY KEY (id)
+users
+choresAndUsers
+chores
     
 ```
 ### INSERT INTO VALUES <a name="INSERT_INTO_VALUES"></a>
-```
-INSERT INTO chores
 
 ```
+INSERT INTO users
+INSERT INTO choresAndUsers
+INSERT INTO chores
+```
+
+## Submission Video <a name="Submission_Video"></a>
+
+![4waoe8](https://user-images.githubusercontent.com/67298961/106538666-37f26e80-64c2-11eb-9c7e-6276b8d87770.gif)
+
 
 
 ## License :cop: :guardsman:
