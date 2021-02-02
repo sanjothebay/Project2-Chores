@@ -1,7 +1,5 @@
 # Chores App Project
 
-================
-
 ---
 
 Created by JC , LUIS , RAQUEL
