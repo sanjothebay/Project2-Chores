@@ -28,7 +28,7 @@ require("./routes/users-api-routes")(app);
 
 app.use(routes); */
 
-db.sequelize.sync({force: false}).then(function(){
+db.sequelize.sync({force: true}).then(function(){
   
   // Start our server so that it can begin listening to client requests.
   app.listen(PORT, function() {
