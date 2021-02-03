@@ -6,6 +6,8 @@ Created by JC , LUIS , RAQUEL
 
 https://protected-island-07471.herokuapp.com/
 
+https://github.com/pegasus-1982/Project2-Chores/tree/main
+
 https://github.com/pegasus-1982/Project2-Chores/tree/JC
 
 ![image](https://user-images.githubusercontent.com/67298961/106533785-5ce1e400-64b8-11eb-9e8d-0aa781c02bc0.png)
