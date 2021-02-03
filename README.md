@@ -4,9 +4,15 @@
 
 Created by JC , LUIS , RAQUEL
 
+https://protected-island-07471.herokuapp.com/
+
 https://github.com/pegasus-1982/Project2-Chores/tree/JC
 
 ![image](https://user-images.githubusercontent.com/67298961/106533785-5ce1e400-64b8-11eb-9e8d-0aa781c02bc0.png)
+
+## Presentaion 
+
+https://documentcloud.adobe.com/link/review?uri=urn:aaid:scds:US:a4464dff-5789-4a7a-9d21-44de1e01fd56
 
 # Table of contents
 
@@ -244,7 +250,7 @@ heroku open
 
 You can fine the app runing in Heroku
 
-[![Deploy App in Heroku](https://shrouded-lake-16170.herokuapp.com/)](https://shrouded-lake-16170.herokuapp.com/)
+[![Deploy App in Heroku](https://protected-island-07471.herokuapp.com/)
 
 ## Tests
 
@@ -256,7 +262,8 @@ Demo aplication
 
 Demo running
 
-![demo](https://github.com/rakeru2006/express_heroku/blob/main/note.png)
+![4waoe8](https://user-images.githubusercontent.com/67298961/106538666-37f26e80-64c2-11eb-9c7e-6276b8d87770.gif)
+
 
 ## Contributing
 
