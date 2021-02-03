@@ -1,7 +1,5 @@
 # Chores App Project
 
-================
-
 ---
 
 Created by JC , LUIS , RAQUEL
@@ -16,8 +14,11 @@ https://github.com/pegasus-1982/Project2-Chores/tree/JC
 
 1. [Instruction](#Instruction)
 2. [Getting Started](#Getting_Started)
+2. [App Setup](#App_Setup)
+3. [Directory structure](#Directory_structure)
 3. [Tables](#Tables)
 4. [INSERT INTO VALUES](#INSERT_INTO_VALUES)
+5. [Submission Video](#Submission_Video)
 
 
 ## Description :bulb:
@@ -67,6 +68,7 @@ This application uses Sequelize as a backend and save and retrieve the Name and 
 * Must protect API keys in Node with environment variables
 
 #### App Setup
+## App Setup <a name="App_Setup"></a>
 
 config Folder was created by running sequelize init:config and adds a config.json file.. (sequelize cli)
 
@@ -77,12 +79,13 @@ npm install express-handlebars
 
 The application will be invoked by using the following command:
 
-```bash
-node app.js  To run the App
+```
+node server.js  To run the App
 npm run test To run t he tests 
 ```
 
 #### Directory structure
+Directory structure <a name="Directory_structure"></a>
 
 All the recommended files and directories from the steps above should look like the following structure:
 
@@ -151,6 +154,9 @@ INSERT INTO users
 INSERT INTO choresAndUsers
 INSERT INTO chores
 ```
+
+![image](https://user-images.githubusercontent.com/67298961/106613946-627b1080-6530-11eb-940a-11c13f1e98f4.png)
+
 
 ## Submission Video <a name="Submission_Video"></a>
 
